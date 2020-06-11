@@ -29,7 +29,7 @@ namespace RestAPIinMemorydb
         public void ConfigureServices(IServiceCollection services)
         {
             
-
+            //Noedvendig for at kunne benytte inmemory, HUSK AT AENDRE DETTE!
             services.AddDbContext<RestAPIinMemorydbContext>(opt => opt.UseInMemoryDatabase("Test"));
             services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin()); });
 
